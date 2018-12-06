@@ -32,10 +32,10 @@ public class SiteCrawler {
         getLinks(facingUrl);
 
         // Login to the application.
-        String loginURL = "https://dev.realquest.com/jsp/rq.jsp?action=login";
+        String loginURL = "";
         Connection.Response res = Jsoup.connect(loginURL).followRedirects(true)
-                .data("username", "QA000003")
-                .data("password", "sacqa003").execute();
+                .data("username", "")
+                .data("password", "").execute();
         Document doc = res.parse();
         sessionId = res.cookie("JSESSIONID");
 
